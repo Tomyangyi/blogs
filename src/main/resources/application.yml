@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+  thymeleaf:
+    cache: false
+    prefix : classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+http:
+  multipart:
+    max-file-size: 20MB
+    max-request-size: 100MB
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.blogs2.mapper.model
+  configuration:
+    map-underscore-to-camel-case: true

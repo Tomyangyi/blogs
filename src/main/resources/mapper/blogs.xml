@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blogs2.mapper.BlogsMapper">
+
+    <insert id="addTitle" parameterType="com.blogs2.bean.Title">
+        INSERT INTO title_list (
+         title, introduce, message,type)
+        VALUES (
+        #{title}, #{introduce}, #{message}, #{type})
+    </insert>
+    <select id="getTitleList" resultType="com.blogs2.bean.Title">
+        SELECT * from title_list where type=#{type}
+    </select>
+
+    <select id="getTitle" resultType="com.blogs2.bean.Title">
+        SELECT * from title_list where id=#{id}
+    </select>
+
+    <update id="update" parameterType="com.blogs2.bean.Title">
+        UPDATE title_list
+        SET
+        <if test="title != null and title != ''">
+            title=#{title}
+        </if>
+        <if test="introduce != null and introduce != ''">
+            introduce=#{introduce}
+        </if>
+        <if test="message != null and message != ''">
+            message=#{message}
+        </if>
+        WHERE id = #{id}
+    </update>
+    <delete id="delete" parameterType="com.blogs2.bean.Title">
+        DELETE FROM title_list
+        WHERE id = #{id}
+    </delete>
+</mapper>
