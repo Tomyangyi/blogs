@@ -20,3 +20,5 @@ mybatis:
   typeAliasesPackage: com.blogs2.mapper.model
   configuration:
     map-underscore-to-camel-case: true
+
+hello: welcome to hello world
