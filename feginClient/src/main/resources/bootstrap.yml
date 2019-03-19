@@ -1,0 +1,24 @@
+server:
+  port: 8763
+  max-http-header-size: 10485760
+  tomcat:
+    uri-encoding: UTF-8
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: feginClient #别以为这只是定义项目名，其实它是跟你放在git上的配置文件的名称相对应的，它们约好了，{application} = 这里定义的名称
+  cloud:
+    config:
+      name: configClient
+      label: master  # 定义你想获取git上哪个分支名称下的配置文件{label} = 分支名称
+      profile: dev   # 定义你在git上配置问题的名称，比如我的{application}-dev.yml, 所以我这里需要填写dev
+      # uri: http://localhost:8888/
+      discovery:
+         enabled: true
+         serviceId: configServer
+      # 这里是定义你configServer里定义的项目名称。

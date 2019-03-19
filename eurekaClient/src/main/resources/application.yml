@@ -1,0 +1,19 @@
+
+server:
+  port: 8762
+  max-http-header-size: 10485760
+  tomcat:
+    uri-encoding: UTF-8
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: eurekaClient #定义项目的名称
+  cloud:
+    feign:
+      hystrix:
+        enabled: true
