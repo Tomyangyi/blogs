@@ -16,7 +16,7 @@ spring:
     config:
       name: configClient
       label: master  # 定义你想获取git上哪个分支名称下的配置文件{label} = 分支名称
-      profile: dev   # 定义你在git上配置问题的名称，比如我的{application}-dev.yml, 所以我这里需要填写dev
+      profile: pro   # 定义你在git上配置问题的名称，比如我的{application}-pro.yml, 所以我这里需要填写dev
       # uri: http://localhost:8888/
       discovery:
          enabled: true
