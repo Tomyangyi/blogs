@@ -1,9 +1,8 @@
 
 server:
-  port: 8763
+  port: 8764
   max-http-header-size: 10485760
-  tomcat:
-    uri-encoding: UTF-8
+
 
 eureka:
   client:
@@ -17,6 +16,3 @@ spring:
     feign:
       hystrix:
         enabled: true
-    ribbon:
-      ReadTimeout: 10000
-      ConnectTimeout: 10000
