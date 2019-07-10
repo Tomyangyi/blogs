@@ -8,7 +8,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 
 
-@ComponentScan("com.blogs2")
 @MapperScan(basePackages="com.blogs2.mapper.BlogsMapper")
 @SpringBootApplication
 public class DemoApplication extends SpringBootServletInitializer {

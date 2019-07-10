@@ -22,9 +22,9 @@ public class FeginServer {
     }
 
 
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String hello(){
-        logger.info("Client1收到fegin请求");
-        return "hello ";
+    @RequestMapping(value = "/getHello",method = RequestMethod.GET)
+    public String getHello(){
+        return "abcdefghijk";
     }
+
 }

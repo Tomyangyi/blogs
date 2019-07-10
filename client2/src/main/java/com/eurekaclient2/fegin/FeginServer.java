@@ -17,4 +17,9 @@ public class FeginServer {
         return "client2"+name;
     }
 
+    @RequestMapping(value = "/getHello",method = RequestMethod.GET)
+    public String getHello(){
+        return "123456789";
+    }
+
 }

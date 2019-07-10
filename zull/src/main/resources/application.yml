@@ -1,0 +1,17 @@
+server:
+  port: 8766
+  max-http-header-size: 10485760
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  application:
+    name: zullClient #别以为这只是定义项目名，其实它是跟你放在git上的配置文件的名称相对应的，它们约好了，{application} = 这里定义的名称
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    zullClient: /test/**

@@ -20,3 +20,8 @@ spring:
     ribbon:
       ReadTimeout: 10000
       ConnectTimeout: 10000
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

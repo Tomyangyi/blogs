@@ -16,3 +16,8 @@ spring:
     feign:
       hystrix:
         enabled: true
+zuul:
+  routes:
+    feign:
+      path: /hello/**
+      serviceId: feginClient

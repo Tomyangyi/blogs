@@ -26,9 +26,19 @@ spring:
       discovery:
          enabled: true
          serviceId: configServer
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
       # 这里是定义你configServer里定义的项目名称。
 management:
   endpoints:
     web:
       exposure:
         include: refresh,health,info
+zuul:
+  routes:
+    eurekaClient: /test/**
+
+
